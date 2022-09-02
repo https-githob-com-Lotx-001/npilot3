@@ -43,7 +43,7 @@ class CarInterface(CarInterfaceBase):
     ret.maxSteeringAngleDeg = 1000.
 
     ret.steerFaultMaxAngle = 85
-    ret.steerFaultMaxFrames = 90
+    ret.steerFaultMaxFrames = 75
 
     ret.disableLateralLiveTuning = False
 
@@ -74,11 +74,11 @@ class CarInterface(CarInterfaceBase):
     else:
       ret.lateralTuning.init('torque')
       ret.lateralTuning.torque.useSteeringAngle = True
-      max_lat_accel = 2.5
+      max_lat_accel = 2.6
       ret.lateralTuning.torque.kp = 1.0 / max_lat_accel
       ret.lateralTuning.torque.kf = 1.0 / max_lat_accel
       ret.lateralTuning.torque.ki = 0.1 / max_lat_accel
-      ret.lateralTuning.torque.friction = 0.01
+      ret.lateralTuning.torque.friction = 0.0
 
       ret.lateralTuning.torque.kd = 0.0
       ret.lateralTuning.torque.deadzone = 0.0
@@ -130,11 +130,11 @@ class CarInterface(CarInterfaceBase):
 
       if ret.lateralTuning.which() == 'torque':
         ret.lateralTuning.torque.useSteeringAngle = True
-        max_lat_accel = 2.5
+        max_lat_accel = 2.6
         ret.lateralTuning.torque.kp = 1.0 / max_lat_accel
         ret.lateralTuning.torque.kf = 1.0 / max_lat_accel
         ret.lateralTuning.torque.ki = 0.1 / max_lat_accel
-        ret.lateralTuning.torque.friction = 0.01
+        ret.lateralTuning.torque.friction = 0.0
         ret.lateralTuning.torque.kd = 0.0
 
     elif candidate == CAR.GENESIS_EQ900_L:
