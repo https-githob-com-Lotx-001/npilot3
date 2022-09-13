@@ -54,8 +54,8 @@ class nTune():
       ctrl.A = np.array([0., 1., -0.22619643, 1.21822268]).reshape((2, 2))
       ctrl.B = np.array([-1.92006585e-04, 3.95603032e-05]).reshape((2, 1))
       ctrl.C = np.array([1., 0.]).reshape((1, 2))
-      ctrl.K = np.array([-110., 451.]).reshape((1, 2))
-      ctrl.L = np.array([0.33, 0.318]).reshape((2, 1))
+      ctrl.K = np.array([-100., 450.]).reshape((1, 2))
+      ctrl.L = np.array([0.22, 0.318]).reshape((2, 1))
     elif "LatControlTorque" in str(type(ctrl)):
       self.type = LatType.TORQUE
       self.file = CONF_LAT_TORQUE_FILE
